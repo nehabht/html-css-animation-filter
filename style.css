@@ -122,16 +122,69 @@
 
 /* solution ex 9 */
 
+.ex-9-img:hover{
+    border-radius: 15px;
+    filter: drop-shadow(1px 1px 9px black) hue-rotate(272deg);
+    width: 600px;
+    transition: 5s;
 
+}
 
-
+/* ex 10 */
 
 .ex-10-icon {
     font-size: 60px;
 }
+
+/* solution ex 10 */
+
+.ex-10-icon{
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+
+}
+
+ /* ex 11 */
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+/* solution ex 11 */
+
+.ex-11-icon:hover{
+    animation-name: rotate_backwards;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate_backwards{
+
+    0%{
+        transform: rotate(0deg);  
+
+    }
+
+    75%{
+        transform: rotate(-280deg); 
+
+    }
+
+}
+
+
+
+ /* ex 12 - ex 13 */
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -161,3 +214,91 @@
     width: 60px;
     height: 20px;
 }
+
+
+/* solution ex 12 */
+
+.ex-12-top-white{
+    animation: movetop 5s linear;
+}
+
+
+
+.ex-12-bottom-white{
+    animation: movebottom 5s linear;
+
+}
+
+@keyframes movetop{
+
+    0%{
+        left: 10%;
+    }
+
+
+    50%{
+        right: calc(100% - 60px);
+    }
+
+
+    100%{
+        right: 10%;
+    }
+
+    
+
+}
+
+
+
+@keyframes movebottom{
+
+    0%{
+        left: -10%;
+    }
+
+
+    50%{
+        left: calc(50% - 60px);
+    }
+
+
+    100%{
+        left: calc(100% - 60px);
+    }
+
+    
+
+}
+
+
+/* solution ex 13 */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: movetop2 3s linear;
+    width: 55px;
+}
+@keyframes movetop2{
+
+    0%{
+        top: -10px;
+        left: 10%;
+    }
+
+
+    50%{
+        top: 30px;
+        left: calc(100% - 30px)
+    }
+
+
+    100%{
+        top: -10px;
+        left: 10%;
+    }
+
+    
+
+}
+
+
